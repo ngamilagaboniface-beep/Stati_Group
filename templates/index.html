@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stati Group Company Limited | Real Estate Dar es Salaam</title>
+    <meta name="description" content="Premium property sales, rentals, and land acquisition in Dar es Salaam, Tanzania.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-stati-blue { background-color: #0A192F; }
+        .text-stati-blue { color: #0A192F; }
+        .bg-stati-gold { background-color: #D4AF37; }
+        .text-stati-gold { color: #D4AF37; }
+        .border-stati-gold { border-color: #D4AF37; }
+        html { scroll-behavior: smooth; }
+        
+        /* Premium Gradient for Hero */
+        .hero-gradient {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
 
+    <a href="https://wa.me/255797060911" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 hover:scale-110 transition flex items-center gap-2 group">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.893-9.892.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.738-.974zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="font-bold text-sm hidden md:block">WhatsApp Chat</span>
+    </a>
+
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex flex-col leading-none">
+                <span class="text-stati-blue font-extrabold text-2xl tracking-tighter">STATI GROUP</span>
+                <span class="text-stati-gold text-[8px] font-bold uppercase tracking-[0.3em] mt-1">Company Limited</span>
+            </a>
+            <div class="hidden md:flex gap-10 text-[11px] font-black uppercase tracking-widest text-slate-500">
+                <a href="#properties" class="hover:text-stati-gold transition">Listings</a>
+                <a href="#services" class="hover:text-stati-gold transition">Services</a>
+                <a href="#about" class="hover:text-stati-gold transition">About Us</a>
+                <a href="#contact" class="hover:text-stati-gold transition">Contact</a>
+            </div>
+            <a href="tel:0797060911" class="bg-stati-blue text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider hover:bg-stati-gold transition shadow-lg shadow-blue-900/20">Call Now</a>
+        </div>
+    </nav>
+
+    <section class="hero-gradient text-white pt-32 pb-44 px-6 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Find Your Perfect Property in Dar es Salaam</h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-12 font-light">Trusted Real Estate Experts in Sales, Rentals, and Land Acquisition.</p>
+            
+            <form action="/" method="GET" class="bg-white p-2 rounded-2xl flex flex-col md:flex-row gap-2 shadow-2xl max-w-3xl mx-auto border-4 border-white/10">
+                <input type="text" name="location" placeholder="Location (e.g. Masaki)" class="flex-1 p-4 text-slate-800 outline-none rounded-xl text-sm bg-slate-50">
+                <select name="type" class="p-4 text-slate-500 bg-slate-50 outline-none rounded-xl text-sm border-x border-slate-100">
+                    <option value="">All Types</option>
+                    <option value="House">House</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Land">Land</option>
+                </select>
+                <button type="submit" class="bg-stati-gold text-stati-blue font-black px-10 py-4 rounded-xl uppercase tracking-widest text-xs hover:bg-stati-blue hover:text-white transition-all">Search Now</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-6 -mt-20 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <p class="text-2xl font-black text-stati-blue">500+</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400">Plots Sold</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <p class="text-2xl font-black text-stati-blue">100%</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400">Surveyed Land</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <p class="text-2xl font-black text-stati-blue">Masaki</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400">Primary Office</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <p class="text-2xl font-black text-stati-blue">24/7</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400">Support</p>
+            </div>
+        </div>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="container mx-auto px-6 mt-8">
+            <div class="bg-stati-blue text-stati-gold p-4 rounded-xl text-center font-bold text-xs uppercase tracking-widest animate-bounce">
+                {{ messages[0] }}
+            </div>
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <section id="properties" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-stati-blue mb-2">Available Listings</h2>
+                    <div class="w-12 h-1.5 bg-stati-gold rounded-full"></div>
+                </div>
+                <div class="hidden md:flex gap-4">
+                    <span class="text-[10px] font-black uppercase text-slate-400">Scroll to explore Properties &rarr;</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {% for p in properties %}
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 group">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="{{ p.image_url }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full shadow-sm">
+                            <span class="text-[10px] font-black text-stati-blue uppercase tracking-tighter">{{ p.property_type }}</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-stati-gold text-stati-blue px-4 py-1 rounded-lg text-xs font-black shadow-lg">NEW LISTING</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-stati-gold text-[10px] font-black uppercase tracking-[0.2em] mb-2">{{ p.location }}</p>
+                        <h3 class="text-xl font-extrabold text-stati-blue mb-3">{{ p.title }}</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">{{ p.features }}</p>
+                        <div class="flex justify-between items-center pt-6 border-t border-slate-50">
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Asking Price</p>
+                                <p class="text-2xl font-black text-stati-blue">{{ "{:,.0f}".format(p.price) }} <span class="text-[10px] text-slate-400">TZS</span></p>
+                            </div>
+                            <a href="#contact" class="bg-slate-900 text-white w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-stati-gold transition shadow-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col-span-full py-20 text-center bg-slate-100 rounded-[2rem]">
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">More properties coming soon to Dar es Salaam!</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-stati-blue text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl mb-16">
+                <h2 class="text-stati-gold text-xs font-black uppercase tracking-[0.3em] mb-4">What we do</h2>
+                <h3 class="text-4xl font-extrabold leading-tight">Comprehensive Real Estate Solutions for the Tanzanian Market</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-10 border border-white/10 rounded-3xl hover:bg-white/5 transition group">
+                    <div class="text-3xl mb-6">🏘️</div>
+                    <h4 class="text-lg font-bold mb-4">Property Sales</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Direct access to premium residential houses and commercial buildings in Masaki, Mikocheni, and Mbezi.</p>
+                </div>
+                <div class="p-10 border border-white/10 rounded-3xl hover:bg-white/5 transition group">
+                    <div class="text-3xl mb-6">📜</div>
+                    <h4 class="text-lg font-bold mb-4">Land Acquisition</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Surveyed plots with clean title deeds. We handle the legal verification so you can buy with peace of mind.</p>
+                </div>
+                <div class="p-10 border border-white/10 rounded-3xl hover:bg-white/5 transition group">
+                    <div class="text-3xl mb-6">🏢</div>
+                    <h4 class="text-lg font-bold mb-4">Consultancy</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Expert advice on property valuation, investment ROI, and regional development trends in Tanzania.</p>
+                </div>
+                <div class="p-10 border border-white/10 rounded-3xl hover:bg-white/5 transition group">
+                    <div class="text-3xl mb-6">🔑</div>
+                    <h4 class="text-lg font-bold mb-4">Rentals</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Luxury apartments and family homes for long-term lease in secure, high-end neighborhoods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-extrabold text-stati-blue mb-6">Plan Your Investment</h2>
+                <p class="text-slate-600 mb-8 leading-relaxed">Estimate your monthly mortgage payments with our easy-to-use tool. Ideal for buyers looking at long-term financing in Tanzania.</p>
+                
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-inner">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Property Price (TZS)</label>
+                            <input type="number" id="calcPrice" placeholder="e.g. 200000000" class="w-full mt-2 p-4 rounded-xl border-0 bg-white outline-none focus:ring-2 ring-stati-gold shadow-sm">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Down Payment (%)</label>
+                                <input type="number" id="calcDown" value="20" class="w-full mt-2 p-4 rounded-xl border-0 bg-white outline-none focus:ring-2 ring-stati-gold shadow-sm">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Term (Years)</label>
+                                <input type="number" id="calcYears" value="10" class="w-full mt-2 p-4 rounded-xl border-0 bg-white outline-none focus:ring-2 ring-stati-gold shadow-sm">
+                            </div>
+                        </div>
+                        <button onclick="calculateMonthly()" class="w-full bg-stati-blue text-white font-black py-4 rounded-xl uppercase tracking-widest text-xs hover:bg-stati-gold transition shadow-xl shadow-blue-900/10">Calculate Payment</button>
+                        
+                        <div id="resultBox" class="hidden p-6 bg-stati-blue text-white rounded-2xl text-center">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Estimated Monthly Payment</p>
+                            <p id="monthlyResult" class="text-3xl font-black text-stati-gold">0 TZS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" class="rounded-[3rem] shadow-2xl">
+                <div class="absolute -bottom-6 -left-6 bg-stati-gold p-8 rounded-3xl text-stati-blue shadow-2xl">
+                    <p class="text-4xl font-black">15%</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">Avg. Annual ROI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-stati-blue text-xs font-black uppercase tracking-[0.3em] mb-4">Get in touch</h2>
+                <h3 class="text-4xl font-extrabold text-stati-blue mb-8 leading-tight">Ready to Secure Your Future in Real Estate?</h3>
+                
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm text-2xl">📍</div>
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Our HQ</p>
+                            <p class="font-bold text-stati-blue">Dar es Salaam, Tanzania</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm text-2xl">📞</div>
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Phone</p>
+                            <p class="font-bold text-stati-blue">0797 060 911</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <form action="/contact" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-xl border border-slate-100 bg-slate-50 outline-none focus:border-stati-gold text-sm">
+                    <input type="text" name="phone" placeholder="Phone Number" required class="w-full p-4 rounded-xl border border-slate-100 bg-slate-50 outline-none focus:border-stati-gold text-sm">
+                    <textarea name="message" placeholder="I'm interested in..." required class="w-full p-4 rounded-xl border border-slate-100 bg-slate-50 outline-none focus:border-stati-gold text-sm h-32"></textarea>
+                    <button class="w-full bg-stati-blue text-white font-black py-5 rounded-xl uppercase tracking-widest text-xs hover:bg-stati-gold transition shadow-xl shadow-blue-900/20">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stati-blue text-white py-20 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-black tracking-tighter mb-4">STATI GROUP</h2>
+            <p class="text-slate-500 text-xs uppercase tracking-widest font-bold mb-10">Premium Real Estate Solutions</p>
+            <div class="flex justify-center gap-8 mb-16 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                <a href="#" class="hover:text-stati-gold">Instagram</a>
+                <a href="#" class="hover:text-stati-gold">LinkedIn</a>
+                <a href="#" class="hover:text-stati-gold">Facebook</a>
+            </div>
+            <p class="text-[10px] text-slate-600 font-bold uppercase tracking-widest">&copy; 2026 Stati Group Company Limited. Dar es Salaam.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateMonthly() {
+            const price = parseFloat(document.getElementById('calcPrice').value);
+            const downPercent = parseFloat(document.getElementById('calcDown').value) / 100;
+            const years = parseFloat(document.getElementById('calcYears').value);
+            const rate = 0.15 / 12; // Flat 15% annual rate
+            const n = years * 12;
+
+            if(!price) return alert("Please enter property price");
+
+            const principal = price * (1 - downPercent);
+            const monthly = principal * ( (rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1) );
+
+            document.getElementById('resultBox').classList.remove('hidden');
+            document.getElementById('monthlyResult').innerText = Math.round(monthly).toLocaleString() + " TZS";
+        }
+    </script>
+</body>
+</html>
