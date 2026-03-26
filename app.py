@@ -3,21 +3,15 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from datetime import datetime
-import cloudinary
-import cloudinary.uploader
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'STATI_GROUP_PRO_2026')
+app.config['SECRET_KEY'] = 'STATI_GROUP_ULTIMATE_2026'
 
-# Cloudinary Setup
-cloudinary.config(
-  cloud_name = os.environ.get('CLOUDINARY_NAME'),
-  api_key = os.environ.get('CLOUDINARY_API_KEY'),
-  api_secret = os.environ.get('CLOUDINARY_API_SECRET')
-)
-
+# Database Configuration (SQLite)
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'stati_group.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
@@ -48,7 +42,7 @@ class Inquiry(db.Model):
 @login_manager.user_loader
 def load_user(id): return User.query.get(int(id))
 
-# --- INITIALIZE DATABASE & USER ---
+# --- INITIALIZE DATABASE & ADMIN ACCOUNT ---
 with app.app_context():
     db.create_all()
     admin = User.query.filter_by(username='admin').first()
@@ -56,10 +50,10 @@ with app.app_context():
         db.session.add(User(username='admin', password='2007fe'))
         db.session.commit()
     else:
-        admin.password = '2007fe'
+        admin.password = '2007fe' # Force-sync password to 2007fe
         db.session.commit()
 
-# --- ROUTES ---
+# --- PUBLIC ROUTES ---
 @app.route('/')
 def index():
     loc = request.args.get('location')
@@ -78,7 +72,7 @@ def send_inquiry():
     )
     db.session.add(new_inq)
     db.session.commit()
-    flash('Asante! Your inquiry has been sent to Stati Group.')
+    flash('Asante! Your inquiry has been sent to the Stati Group team.')
     return redirect(url_for('index'))
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -88,9 +82,10 @@ def login():
         if user and user.password == request.form.get('password'):
             login_user(user)
             return redirect(url_for('admin_dashboard'))
-        flash('Invalid Credentials')
+        flash('Invalid Username or Password')
     return render_template('login.html')
 
+# --- ADMIN ROUTES ---
 @app.route('/admin')
 @login_required
 def admin_dashboard():
@@ -101,13 +96,12 @@ def admin_dashboard():
 @app.route('/admin/upload', methods=['POST'])
 @login_required
 def upload():
-    file = request.files['file']
-    result = cloudinary.uploader.upload(file)
     new_p = Property(title=request.form.get('title'), location=request.form.get('location'), 
                      property_type=request.form.get('type'), price=float(request.form.get('price')), 
-                     features=request.form.get('features'), image_url=result['secure_url'])
+                     features=request.form.get('features'), image_url=request.form.get('image_url'))
     db.session.add(new_p)
     db.session.commit()
+    flash('Listing added successfully!')
     return redirect(url_for('admin_dashboard'))
 
 @app.route('/admin/delete/<int:id>', methods=['POST'])
@@ -120,7 +114,8 @@ def delete(id):
 
 @app.route('/logout')
 def logout():
-    logout_user(); return redirect(url_for('index'))
+    logout_user()
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
