@@ -10,49 +10,72 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .bg-stati-blue { background-color: #0A192F; }
         .text-stati-gold { color: #D4AF37; }
-        .hero-bg { background: linear-gradient(rgba(10,25,47,0.8), rgba(10,25,47,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); background-size: cover; }
+        .hero-bg { background: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.95)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); background-size: cover; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="bg-white/90 backdrop-blur sticky top-0 z-50 border-b p-4">
+    <a href="https://wa.me/255797060911" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 hover:scale-110 transition flex items-center gap-2">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.893-9.892.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.738-.974zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <nav class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b p-4 shadow-sm">
         <div class="container mx-auto flex justify-between items-center">
             <a href="/" class="flex flex-col">
-                <span class="text-stati-blue font-black text-xl italic uppercase">Stati Group</span>
-                <span class="text-stati-gold text-[8px] font-bold uppercase tracking-widest">Company Limited</span>
+                <span class="text-stati-blue font-black text-xl italic uppercase tracking-tighter">STATI GROUP</span>
+                <span class="text-stati-gold text-[8px] font-bold uppercase tracking-[0.3em] mt-1">Company Limited</span>
             </a>
             <div class="flex items-center gap-6">
-                <button onclick="toggleCart()" class="bg-stati-blue text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                <button onclick="toggleCart()" class="bg-stati-blue text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-stati-gold transition">
                     Selection (<span id="cart-count">0</span>)
                 </button>
-                <a href="/login" class="hidden md:block text-[10px] font-bold text-slate-400 uppercase hover:text-stati-gold">Staff Login</a>
+                <a href="/login" class="hidden md:block text-[10px] font-bold text-slate-400 uppercase border-l pl-6 border-slate-100 hover:text-stati-blue">Staff Portal</a>
             </div>
         </div>
     </nav>
 
     <header class="hero-bg py-32 text-center text-white px-6">
-        <h1 class="text-4xl md:text-7xl font-black mb-6 tracking-tighter">Find Your Future Plot</h1>
-        <p class="text-slate-400 mb-12 text-lg">Premium residential and commercial plots in Dar es Salaam.</p>
-        <form action="/" method="GET" class="bg-white p-2 rounded-2xl flex flex-col md:row gap-2 max-w-3xl mx-auto shadow-2xl">
-            <input type="text" name="location" placeholder="Search by area (e.g. Masaki, Kigamboni...)" class="flex-1 p-4 text-slate-800 outline-none rounded-xl text-sm">
-            <button class="bg-stati-blue text-stati-gold px-10 py-4 rounded-xl font-black uppercase text-xs">Search</button>
-        </form>
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">Luxury Plots in Tanzania</h1>
+            <p class="text-slate-300 mb-12 text-lg italic font-light">Your trusted partner for residential, commercial, and investment land.</p>
+            <form action="/" method="GET" class="bg-white p-2 rounded-2xl flex flex-col md:flex-row gap-2 max-w-2xl mx-auto shadow-2xl">
+                <input type="text" name="location" placeholder="Search by area (Masaki, Goba, Kigamboni...)" class="flex-1 p-4 text-slate-800 outline-none rounded-xl text-sm">
+                <button class="bg-stati-blue text-stati-gold px-10 py-4 rounded-xl font-black uppercase text-xs">Search</button>
+            </form>
+        </div>
     </header>
 
-    <section id="plots" class="py-24 container mx-auto px-6">
-        <div class="flex justify-between items-end mb-12 border-l-4 border-stati-gold pl-6">
-            <h2 class="text-3xl font-black text-stati-blue uppercase tracking-tight">Active Listings</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="container mx-auto px-6 mt-10">
+            <div class="bg-stati-blue text-stati-gold p-4 rounded-xl text-center font-bold text-xs uppercase animate-pulse">{{ messages[0] }}</div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {% endif %}
+    {% endwith %}
+
+    <section id="plots" class="py-24 container mx-auto px-6">
+        <div class="flex justify-between items-end mb-16 border-l-4 border-stati-gold pl-6">
+            <h2 class="text-3xl font-black text-stati-blue uppercase tracking-tight italic">Available Listings</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {% for p in properties %}
-            <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 group">
-                <img src="{{ p.image_url }}" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="{{ p.image_url }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full shadow-sm">
+                        <span class="text-[9px] font-black text-stati-blue uppercase tracking-tighter">{{ p.property_type }}</span>
+                    </div>
+                </div>
                 <div class="p-8">
-                    <p class="text-stati-gold text-[10px] font-black uppercase tracking-widest mb-2">{{ p.location }}</p>
-                    <h3 class="text-xl font-black text-stati-blue mb-6">{{ p.title }}</h3>
-                    <div class="flex justify-between items-center pt-6 border-t">
-                        <span class="text-xl font-black text-stati-blue">{{ "{:,.0f}".format(p.price) }} TZS</span>
-                        <button onclick="addToCart('{{ p.title }}')" class="bg-stati-gold text-white px-4 py-2 rounded-xl text-[10px] font-black uppercase">Add to Selection</button>
+                    <p class="text-stati-gold text-[10px] font-black uppercase tracking-[0.2em] mb-2">{{ p.location }}</p>
+                    <h3 class="text-xl font-black text-stati-blue mb-4 leading-tight">{{ p.title }}</h3>
+                    <p class="text-slate-500 text-xs mb-8 leading-relaxed line-clamp-2">{{ p.features }}</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-slate-50">
+                        <div>
+                            <p class="text-[9px] font-bold text-slate-400 uppercase mb-1">Total Price</p>
+                            <p class="text-xl font-black text-stati-blue">{{ "{:,.0f}".format(p.price) }} <span class="text-[10px] text-slate-400">TZS</span></p>
+                        </div>
+                        <button onclick="addToCart('{{ p.title }}')" class="bg-stati-blue text-white px-5 py-3 rounded-2xl text-[10px] font-black uppercase hover:bg-stati-gold transition shadow-lg">Select Plot</button>
                     </div>
                 </div>
             </div>
@@ -60,47 +83,51 @@
         </div>
     </section>
 
-    <section class="py-24 bg-stati-blue text-white">
-        <div class="container mx-auto px-6 max-w-xl text-center">
-            <h2 class="text-3xl font-black mb-4">Investment Calculator</h2>
-            <p class="text-slate-400 text-sm mb-12 italic">Estimate your monthly payments for any plot.</p>
-            <div class="space-y-4">
-                <input type="number" id="c_p" placeholder="Price (TZS)" class="w-full p-5 rounded-2xl text-slate-800 outline-none font-bold">
-                <input type="number" id="c_y" value="5" placeholder="Years" class="w-full p-5 rounded-2xl text-slate-800 outline-none font-bold">
-                <button onclick="runCalc()" class="w-full bg-stati-gold text-stati-blue font-black py-5 rounded-2xl uppercase tracking-widest">Calculate Repayment</button>
-                <div id="c_res" class="hidden mt-8 p-8 bg-white/10 rounded-2xl text-3xl font-black text-stati-gold"></div>
+    <section class="py-24 bg-white border-y">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-4xl font-black text-stati-blue mb-6">Investment Planning</h2>
+                <p class="text-slate-500 mb-10 leading-relaxed">Calculate your monthly plot repayments including our professional management fees.</p>
+                <div class="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 space-y-6">
+                    <input type="number" id="calcPrice" placeholder="Plot Price (TZS)" class="w-full p-5 bg-white rounded-2xl outline-none focus:ring-2 ring-stati-gold shadow-sm font-bold">
+                    <input type="number" id="calcYears" value="5" class="w-full p-5 bg-white rounded-2xl outline-none focus:ring-2 ring-stati-gold shadow-sm font-bold">
+                    <button onclick="calculateMonthly()" class="w-full bg-stati-blue text-white py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-stati-gold transition shadow-xl">Calculate Repayment</button>
+                    <div id="resBox" class="hidden p-8 bg-stati-blue text-white rounded-3xl text-center">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Monthly Installment</p>
+                        <p id="monthlyRes" class="text-3xl font-black text-stati-gold italic"></p>
+                    </div>
+                </div>
             </div>
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" class="rounded-[3rem] shadow-2xl">
         </div>
     </section>
 
-    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-[100] transform translate-x-full transition-transform duration-300 p-8 overflow-y-auto">
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="font-black text-xl text-stati-blue">Your Inquiry List</h2>
-            <button onclick="toggleCart()" class="text-slate-400 text-[10px] font-black uppercase tracking-widest border border-slate-100 px-4 py-2 rounded-lg">Close</button>
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-[100] transform translate-x-full transition-transform duration-300 p-10 overflow-y-auto">
+        <div class="flex justify-between items-center mb-12">
+            <h2 class="font-black text-2xl text-stati-blue italic">Inquiry List</h2>
+            <button onclick="toggleCart()" class="text-slate-400 text-[10px] font-black uppercase tracking-widest border px-4 py-2 rounded-lg">Close</button>
         </div>
-        <div id="cart-items" class="space-y-4 mb-10"></div>
+        <div id="cart-items" class="space-y-4 mb-12"></div>
         <div class="border-t pt-10">
-            <h3 class="font-black text-[10px] uppercase text-stati-gold mb-6 tracking-[0.2em]">Contact Details</h3>
+            <h3 class="font-black text-[10px] uppercase text-stati-gold mb-8 tracking-[0.2em]">Your Contact Details</h3>
             <form action="/send_inquiry" method="POST" class="space-y-4">
                 <input type="hidden" name="cart_data" id="cart_data">
-                <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none text-sm">
-                <input type="email" name="email" placeholder="Email Address" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none text-sm">
-                <input type="text" name="phone" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none text-sm">
-                <button type="submit" class="w-full bg-stati-blue text-white py-5 rounded-xl font-black uppercase tracking-widest text-[10px]">Send Inquiry to Stati Group</button>
+                <input type="text" name="name" placeholder="Full Name" required class="w-full p-5 bg-slate-50 border rounded-2xl outline-none text-sm">
+                <input type="email" name="email" placeholder="Email Address" required class="w-full p-5 bg-slate-50 border rounded-2xl outline-none text-sm">
+                <input type="text" name="phone" placeholder="Phone Number" required class="w-full p-5 bg-slate-50 border rounded-2xl outline-none text-sm">
+                <button type="submit" class="w-full bg-stati-blue text-white py-6 rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-2xl hover:bg-stati-gold transition">Send Inquiry</button>
             </form>
         </div>
     </div>
 
-    <footer class="bg-slate-900 text-white py-20 text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-xl font-black italic mb-2">STATI GROUP</h2>
-            <p class="text-stati-gold text-[9px] font-bold uppercase tracking-[0.3em] mb-12 italic">Real Estate Dar es Salaam</p>
-            <div class="mb-10 flex justify-center gap-6">
-                <a href="/login" class="bg-white/5 border border-white/10 px-6 py-2 rounded-lg text-[9px] font-black uppercase text-slate-500 hover:text-stati-gold transition">Admin Access</a>
-                <a href="https://wa.me/255797060911" class="bg-green-600/10 border border-green-600/20 px-6 py-2 rounded-lg text-[9px] font-black uppercase text-green-500 hover:bg-green-600 hover:text-white transition">WhatsApp</a>
-            </div>
-            <p class="text-[9px] text-slate-700 uppercase font-black tracking-widest italic">&copy; 2026 Stati Group Company Limited. Dar es Salaam, TZ.</p>
+    <footer class="bg-slate-900 text-white py-24 text-center">
+        <h2 class="text-2xl font-black italic tracking-tighter mb-2">STATI GROUP</h2>
+        <p class="text-stati-gold text-[9px] font-black uppercase tracking-[0.4em] mb-12">Real Estate Professionals</p>
+        <div class="flex justify-center gap-8 mb-12">
+            <a href="/login" class="text-slate-600 hover:text-white text-[9px] font-black uppercase tracking-widest">Admin Portal</a>
+            <a href="https://wa.me/255797060911" class="text-green-500 hover:text-white text-[9px] font-black uppercase tracking-widest">WhatsApp</a>
         </div>
+        <p class="text-[9px] text-slate-800 font-black uppercase tracking-[0.2em] italic">&copy; 2026 Stati Group. Dar es Salaam, Tanzania.</p>
     </footer>
 
     <script>
@@ -111,17 +138,17 @@
             const container = document.getElementById('cart-items');
             document.getElementById('cart-count').innerText = cart.length;
             document.getElementById('cart_data').value = cart.join(', ');
-            container.innerHTML = cart.length === 0 ? '<p class="text-slate-400 text-xs italic">Selection empty...</p>' :
-                cart.map(item => `<div class="bg-slate-50 p-4 rounded-xl flex justify-between items-center"><span class="font-bold text-[10px] text-stati-blue uppercase">${item}</span><button onclick="rm('${item}')" class="text-red-500 text-[9px] font-black">X</button></div>`).join('');
+            container.innerHTML = cart.length === 0 ? '<p class="text-slate-400 text-xs italic">Selection empty.</p>' :
+                cart.map(item => `<div class="bg-slate-50 p-5 rounded-2xl flex justify-between items-center"><span class="font-black text-[10px] text-stati-blue uppercase">${item}</span><button onclick="rm('${item}')" class="text-red-500 font-black text-xs">×</button></div>`).join('');
         }
         function rm(t) { cart = cart.filter(i => i !== t); updateUI(); }
-        function runCalc() {
-            let p = document.getElementById('c_p').value;
-            let y = document.getElementById('c_y').value;
+        function calculateMonthly() {
+            const p = document.getElementById('calcPrice').value;
+            const y = document.getElementById('calcYears').value;
             if(!p || !y) return;
-            let r = (p * 1.15) / (y * 12);
-            document.getElementById('c_res').innerText = Math.round(r).toLocaleString() + " TZS / Mo";
-            document.getElementById('c_res').classList.remove('hidden');
+            const res = (p * 1.15) / (y * 12);
+            document.getElementById('monthlyRes').innerText = Math.round(res).toLocaleString() + " TZS";
+            document.getElementById('resBox').classList.remove('hidden');
         }
     </script>
 </body>
